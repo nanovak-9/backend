@@ -73,7 +73,7 @@ const generateToken = (id) => {
 }
 
 const misDatos = asyncHandler(async (req, res) => {
-    res.json({message: 'Mis datos'})
+    res.status(200).json(req.user)
 })
 
 module.exports = {
