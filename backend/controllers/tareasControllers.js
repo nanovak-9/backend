@@ -49,7 +49,7 @@ const deleteTarea = asyncHandler(async (req, res) => {
         throw new Error('La tarea no fue encontrada.')
     }
 
-    const tareaDeleted = await Tarea.deleteOne()
+    const tareaDeleted = await tarea.deleteOne()
 
     if(tarea.user.toString() !== req.user.id){
         res.status(401)
